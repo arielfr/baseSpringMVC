@@ -12,12 +12,11 @@
 	 
 	<security:http entry-point-ref="google2EntryPoint">
 	    <security:custom-filter after="CAS_FILTER" ref="oAuthFilter" />
-		<security:intercept-url pattern="/**" access="IS_AUTHENTICATED_FULLY" />
-        <security:intercept-url pattern="/login" access="IS_AUTHENTICATED_ANONYMOUSLY" />
-        <security:logout logout-success-url="/logout" />
+		<security:intercept-url pattern="/secure/**" access="IS_AUTHENTICATED_FULLY" />
 	</security:http>
     
 	<!-- OAuth Authentication Providers definition -->
+	<!-- Authorize Redirect URI: http://localhost:8080/j_spring_oauth_security_check?oauth_provider_type=Google2Provider -->
     <bean id="google2Provider" class="org.scribe.up.provider.impl.Google2Provider">
         <property name="key" value=""/>
         <property name="secret" value=""/>
