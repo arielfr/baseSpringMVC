@@ -18,8 +18,8 @@
 	<!-- OAuth Authentication Providers definition -->
 	<!-- Authorize Redirect URI: http://localhost:8080/j_spring_oauth_security_check?oauth_provider_type=Google2Provider -->
     <bean id="google2Provider" class="org.scribe.up.provider.impl.Google2Provider">
-        <property name="key" value=""/>
-        <property name="secret" value=""/>
+        <property name="key" value="${google.key}"/>
+        <property name="secret" value="${google.secret}"/>
         <property name="scope" value="EMAIL_AND_PROFILE"/>
     </bean>
  
