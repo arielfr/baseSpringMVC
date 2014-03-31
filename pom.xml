@@ -8,8 +8,10 @@
 	<url>http://maven.apache.org</url>
   
 	<properties>
-		<spring.version>3.2.3.RELEASE</spring.version>
+		<spring.version>3.2.0.RELEASE</spring.version>
 		<spring.security>3.1.0.RELEASE</spring.security>
+		<spring.data.version>1.2.0.RELEASE</spring.data.version>
+		<spring.data.core.version>1.4.0.RELEASE</spring.data.core.version>
 		<jdk-version>1.6</jdk-version>
 		<servlet-api>2.5</servlet-api>
 		<servlet-api-jst>1.2</servlet-api-jst>
@@ -57,6 +59,21 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
 			<version>${spring.security}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${spring.data.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons-core</artifactId>
+			<version>${spring.data.core.version}</version>
 		</dependency>
 		<dependency>
 		    <groupId>javax.servlet</groupId>
