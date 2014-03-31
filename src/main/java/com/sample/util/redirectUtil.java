@@ -10,11 +10,16 @@ public class redirectUtil {
 		SecurityContextHolder.getContext().setAuthentication(null);
 		
 		Boolean blocked = (Boolean) model.get("blocked");
+		Boolean register = (Boolean) model.get("register");
 		
 		if( blocked ){
 			return "domain-error";
 		}else{
-			return redirect;
+			if( register ){
+				return redirect;
+			}else{
+				return "secure/registration";
+			}
 		}
 	}
 }

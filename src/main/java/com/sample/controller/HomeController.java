@@ -26,6 +26,13 @@ public class HomeController extends CommonModel{
 		return redirectUtil.redirect("secure/index", model);
 	}
 	
+	@RequestMapping(value = "/secure/registration", method = RequestMethod.GET)
+	public String secureRegistration(HttpServletRequest request, HttpServletResponse response, Map<String, Object> model) {
+		putCommon(request, response, model);
+		
+		return redirectUtil.redirect("secure/registration", model);
+	}
+	
 	@RequestMapping(value = "/secure/profile", method = RequestMethod.GET)
 	public String secureProfile(HttpServletRequest request, HttpServletResponse response, Map<String, Object> model) {
 		putCommon(request, response, model);

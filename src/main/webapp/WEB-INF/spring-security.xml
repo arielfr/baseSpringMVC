@@ -24,7 +24,7 @@
     </bean>
  
     <bean id="providersDefinition" class="org.scribe.up.provider.ProvidersDefinition">
-        <property name="baseUrl" value="http://localhost:8080/j_spring_oauth_security_check" />
+        <property name="baseUrl" value="${provide.url}" />
         <property name="providers">
             <list>
                 <ref bean="google2Provider" />
